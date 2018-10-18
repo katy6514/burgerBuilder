@@ -2,6 +2,7 @@
 
 import * as actionTypes from './actionTypes';
 
+//dispatched from burger builder container
 export const addIngredient = (name) => {
   return {
     type: actionTypes.ADD_INGREDIENT,
