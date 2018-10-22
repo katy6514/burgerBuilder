@@ -58,7 +58,7 @@ const input = (props) => {
 
   let validationError = null;
   if (props.invalid && props.touched) {
-    console.log(props.elementConfig);
+    //console.log(props.elementConfig);
     validationError = (
       <p className={classes.ValidationError}>
         Please enter a valid {props.elementConfig.valuetype}
