@@ -26,12 +26,14 @@ export const purchaseBurgerStart = () => {
 
 //async, does not return an action
 export const purchaseBurger = (orderData, token) => {
+  console.log('in purchase burger action');
+  console.log(orderData);
   return (dispatch) => {
     dispatch(purchaseBurgerStart());
     axios
       .post('/orders.json?auth=' + token, orderData)
       .then((response) => {
-        console.log(response.data);
+        //console.log(response.data);
         dispatch(purchaseBurgerSuccess(response.data.name, orderData));
       })
       .catch((error) => {

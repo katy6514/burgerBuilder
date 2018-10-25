@@ -17,8 +17,11 @@ class BurgerBuilder extends Component {
   };
 
   componentDidMount() {
+    //console.log(this.props);
     console.log(this.props);
+    // if (this.props.isAuthenticated === false) {
     this.props.onInitIngredients();
+    // }
   }
 
   updatePurchaseState(ingredients) {

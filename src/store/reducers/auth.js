@@ -17,7 +17,7 @@ const authSuccess = (state, action) => {
   return updateObject(state, {
     token: action.idToken,
     userId: action.userId,
-    werror: null,
+    error: null,
     loading: false
   });
 };
@@ -34,7 +34,11 @@ const authLogout = (state, action) => {
 };
 
 const setAuthRedirectPath = (state, action) => {
-  return updateObject(state, { authRedirectPath: action.path });
+  return {
+    ...state,
+    authRedirectPath: '/checkout'
+  };
+  //return updateObject(state, { authRedirectPath: action.path });
 };
 
 const reducer = (state = initialState, action) => {
